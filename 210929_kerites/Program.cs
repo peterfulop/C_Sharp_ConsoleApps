@@ -117,25 +117,21 @@ namespace _210929_kerites
             Console.Write("Adjon meg egy házszámot! ");
             var input = Convert.ToInt32(Console.ReadLine());
 
-            var parosOldal = Convert.ToInt32(input) % 2 > 0 ? false : true;
+            var aktualisTelek = Telkek.FirstOrDefault(a => a.Hazszam == input);
 
-            var colors = Telkek.Where(c => c.Kerites != ':' && c.Kerites != '#')
-                                .GroupBy(a => a.Kerites)
-                                .Distinct()
-                                .OrderBy(x => x.Key)
-                                .ToList();
+            var vizsgalandoTelkek = Telkek.Where(a => a.Hazszam == input + 2 || a.Hazszam == input - 2 || a.Hazszam == input)
+                                    .Select(b=>b.Kerites)
+                                    .ToList();
 
-            var telekOldal = Telkek.FindAll(a => a.Paros == parosOldal).ToList();
-            var telekIndex = telekOldal.FindIndex(a => a.Hazszam == input);
+            var firstColor = Telkek.Where(c => c.Kerites != ':' && c.Kerites != '#')
+                      .GroupBy(x => x.Kerites)
+                      .OrderBy(x => x.Key)
+                      .Select(y => y.Key)
+                      .Except(vizsgalandoTelkek)
+                      .FirstOrDefault();
 
-            char aktualis = telekOldal[telekIndex].Kerites;
-            char szomszed_1 = telekOldal[telekIndex + 1].Kerites;
-            char szomszed_2 = telekOldal[telekIndex - 1].Kerites;
-
-            var color = colors.FirstOrDefault(v => v.Key != aktualis && v.Key != szomszed_1 && v.Key != szomszed_2).Key;
-
-            Console.WriteLine($"A kerítés színe / állapota: {telekOldal[telekIndex].Kerites}");
-            Console.WriteLine($"Egy lehetséges festési szín: {color}");
+            Console.WriteLine($"A kerítés színe / állapota: {aktualisTelek.Kerites}");
+            Console.WriteLine($"Egy lehetséges festési szín: {firstColor}");
 
         }
 
