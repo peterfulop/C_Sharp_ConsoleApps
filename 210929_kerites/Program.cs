@@ -113,14 +113,22 @@ namespace _210929_kerites
 
         public static void Feladat_5()
         {
-            Console.WriteLine("5. feladat");
-            Console.Write("Adjon meg egy házszámot! ");
-            var input = Convert.ToInt32(Console.ReadLine());
 
+
+            Console.WriteLine("5. feladat");
+            Console.Write("Adjon meg egy házszámot!");
+
+            var input = Convert.ToInt32(Console.ReadLine());
             var aktualisTelek = Telkek.FirstOrDefault(a => a.Hazszam == input);
+            
+            if (aktualisTelek == null)
+            {
+                Console.WriteLine("A házszám még nem létezik, a telket nem adták el!");
+                return;
+            }
 
             var vizsgalandoTelkek = Telkek.Where(a => a.Hazszam == input + 2 || a.Hazszam == input - 2 || a.Hazszam == input)
-                                    .Select(b=>b.Kerites)
+                                    .Select(b => b.Kerites)
                                     .ToList();
 
             var firstColor = Telkek.Where(c => c.Kerites != ':' && c.Kerites != '#')
@@ -139,7 +147,8 @@ namespace _210929_kerites
         {
 
             var file = "utcakep.txt";
-            var paratlanOldal = Telkek.FindAll(a => a.Paros == false).ToList();
+
+            var paratlanOldal = Telkek.FindAll(a => a.Paros == false);
 
             using (var fs = new FileStream(file, FileMode.Create))
             {
@@ -157,17 +166,19 @@ namespace _210929_kerites
 
                     foreach (var item in paratlanOldal)
                     {
-                        var hossz = Convert.ToInt32(item.Hazszam.ToString().Length);
-                        for (int i = 0; i < (item.Hossz - hossz) + 1; i++)
+                        var hossz = item.Hazszam.ToString().Length+1;
+                        sw.Write(item.Hazszam);
+                        for (int i = 0; i <= item.Hossz - hossz; i++)
                         {
-                            if (i == 0)
-                            {
-                                sw.Write(item.Hazszam);
-                            }
-                            else
-                            {
-                                sw.Write(" ");
-                            }
+                            sw.Write(" ");
+                            //if (i == 0)
+                            //{
+                            //    sw.Write(item.Hazszam);
+                            //}
+                            //else
+                            //{
+                            //    sw.Write(" ");
+                            //}
                         }
                     }
                 }
