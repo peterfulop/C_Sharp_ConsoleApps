@@ -94,7 +94,7 @@ namespace _211019_kemia
             }
 
             // REGEX megoldással:
-            var reg = Regex.IsMatch(vegyjel, "^[a-zA-z]*$");
+            var regex = Regex.IsMatch(vegyjel, "^[a-zA-z]*$");
 
             //while (string.IsNullOrWhiteSpace(vegyjel)|| vegyjel.Length > 2 || !Regex.IsMatch(vegyjel,"^[a-zA-z]*$"))
             //{
@@ -128,15 +128,18 @@ namespace _211019_kemia
 
         public static void Feladat_07( )
         {
-            var evek = Elemek.Where(e => e.Ev.ToLower() != "ókor").ToList();
+            var evek = Elemek
+                .Where(a => a.Ev.ToLower() != "ókor")
+                .Select(b=>int.Parse(b.Ev))
+                .OrderBy(x=>x)
+                .ToList();
+
             var max = 0;
 
             for (int i = 0; i < evek.Count()-1; i++)
             {
-                if (Convert.ToInt32(evek[i + 1].Ev) - Convert.ToInt32(evek[i].Ev) > max)
-                {
-                    max = Convert.ToInt32(evek[i + 1].Ev) - Convert.ToInt32(evek[i].Ev);
-                }
+                var kulonbseg = evek[i + 1] - evek[i];
+                max = kulonbseg > max ? kulonbseg : max;
             }
 
             Console.WriteLine($"7. Feladat: {max} év volt a leghosszabb időszak két elem felfedezése között.");
@@ -146,17 +149,24 @@ namespace _211019_kemia
         {
             Console.WriteLine("8. Feladat: Statisztika");
 
-            var stat = Elemek
-                .Where(a => a.Ev.ToLower() != "ókor")
-                .GroupBy(b => b.Ev)
-                .Select(c => new { Ev = c.Key, elofordulas = c.Count() })
-                .Where(d => d.elofordulas > 3)
-                .ToList();
+            //var stat = Elemek
+            //    .FindAll(a => a.Ev.ToLower() != "ókor")
+            //    .GroupBy(b => b.Ev)
+            //    .Select(c => new { Ev = c.Key, elofordulas = c.Count() })
+            //    .Where(d => d.elofordulas > 3)
+            //    .ToList();
 
-            foreach (var item in stat)
-            {
-                Console.WriteLine($"\t{item.Ev}: {item.elofordulas} db");
-            }
+            //foreach (var item in stat)
+            //{
+            //    Console.WriteLine($"\t{item.Ev}: {item.elofordulas} db");
+            //}
+            
+            Elemek.FindAll(a => a.Ev.ToLower() != "ókor")
+                  .GroupBy(b => b.Ev)
+                  .Select(c => new { Ev = c.Key, elofordulas = c.Count() })
+                  .Where(d => d.elofordulas > 3)
+                  .ToList()
+                  .ForEach(e => Console.WriteLine($"\t{e.Ev}: {e.elofordulas} db"));
 
         }
 
