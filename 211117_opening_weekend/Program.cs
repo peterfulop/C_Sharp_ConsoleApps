@@ -14,8 +14,9 @@ namespace _211117_opening_weekend
         public string MagyarCim { get; set; }
         public DateTime Bemutato { get; set; }
         public string Forgalmazo { get; set; }
-        public long Bevetel { get; set; }
-        public long Latogato { get; set; }
+        public Int64 Bevetel { get; set; }
+
+        public Int64 Latogato { get; set; }
     }
 
     class Program
@@ -86,8 +87,7 @@ namespace _211117_opening_weekend
         private static void Feladat_06()
         {
 
-            var eredetiLetezik = false;
-            var magyarLetezik = false;
+            var egyezes = false;
 
             foreach (var f in Filmek)
             {
@@ -99,11 +99,11 @@ namespace _211117_opening_weekend
                 {
                     if (ecim[i].ToString().StartsWith("w"))
                     {
-                        eredetiLetezik = true;
+                        egyezes = true;
                     }
                     else
                     {
-                        eredetiLetezik = false;
+                        egyezes = false;
                         break;
                     }
                 }
@@ -112,16 +112,16 @@ namespace _211117_opening_weekend
                 {
                     if (mcim[j].ToString().StartsWith("w"))
                     {
-                        magyarLetezik = true;
+                        egyezes = true;
                     }
                     else
                     {
-                        magyarLetezik = false;
+                        egyezes = false;
                         break;
                     }
                 }
 
-                if (eredetiLetezik && magyarLetezik)
+                if (egyezes)
                 {
                     Console.WriteLine("6. feladat: Ilyen film volt!");
                     break;
@@ -173,8 +173,8 @@ namespace _211117_opening_weekend
                             MagyarCim = sor[1],
                             Bemutato = new DateTime(Convert.ToInt32(datum[0]), Convert.ToInt32(datum[1]), Convert.ToInt32(datum[2])),
                             Forgalmazo = sor[3],
-                            Bevetel = long.Parse(sor[4]),
-                            Latogato = long.Parse(sor[5])
+                            Bevetel = Convert.ToInt64(sor[4]),
+                            Latogato = Convert.ToInt64(sor[5])
                         };
 
                         Filmek.Add(film);
