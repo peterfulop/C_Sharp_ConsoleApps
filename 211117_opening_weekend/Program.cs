@@ -87,10 +87,13 @@ namespace _211117_opening_weekend
         private static void Feladat_06()
         {
 
-            var egyezes = false;
+          
+            var letezik = false;
 
             foreach (var f in Filmek)
             {
+                var eredetiLetezik = false;
+                var magyarLetezik = false;
 
                 var ecim = f.EredetiCim.ToLower().Split(' ');
                 var mcim = f.MagyarCim.ToLower().Split(' ');
@@ -99,11 +102,11 @@ namespace _211117_opening_weekend
                 {
                     if (ecim[i].ToString().StartsWith("w"))
                     {
-                        egyezes = true;
+                        eredetiLetezik = true;
                     }
                     else
                     {
-                        egyezes = false;
+                        eredetiLetezik = false;
                         break;
                     }
                 }
@@ -112,21 +115,25 @@ namespace _211117_opening_weekend
                 {
                     if (mcim[j].ToString().StartsWith("w"))
                     {
-                        egyezes = true;
+                        magyarLetezik = true;
                     }
                     else
                     {
-                        egyezes = false;
+                        magyarLetezik = false;
                         break;
                     }
                 }
 
-                if (egyezes)
+                if (eredetiLetezik && magyarLetezik)
                 {
-                    Console.WriteLine("6. feladat: Ilyen film volt!");
+                    letezik = true;
                     break;
                 }
             }
+
+            var text = letezik ? "volt" : "nem volt";
+            Console.WriteLine($"6. feladat: Ilyen film {text}!");
+
 
         }
 
