@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211110_balkezesek", "211110
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211117_opening_weekend", "211117_opening_weekend\211117_opening_weekend.csproj", "{CA4BEB0A-9199-4848-A036-EAA522DB8108}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211203_helyjegy", "211203_helyjegy\211203_helyjegy.csproj", "{06769882-302B-4C22-943C-A6557A3B61F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{CA4BEB0A-9199-4848-A036-EAA522DB8108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA4BEB0A-9199-4848-A036-EAA522DB8108}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA4BEB0A-9199-4848-A036-EAA522DB8108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06769882-302B-4C22-943C-A6557A3B61F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06769882-302B-4C22-943C-A6557A3B61F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06769882-302B-4C22-943C-A6557A3B61F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06769882-302B-4C22-943C-A6557A3B61F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

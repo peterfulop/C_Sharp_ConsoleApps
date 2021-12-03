@@ -15,7 +15,6 @@ namespace _211117_opening_weekend
         public DateTime Bemutato { get; set; }
         public string Forgalmazo { get; set; }
         public Int64 Bevetel { get; set; }
-
         public Int64 Latogato { get; set; }
     }
 
@@ -86,8 +85,7 @@ namespace _211117_opening_weekend
 
         private static void Feladat_06()
         {
-
-          
+         
             var letezik = false;
 
             foreach (var f in Filmek)
