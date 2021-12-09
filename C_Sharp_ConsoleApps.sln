@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211117_opening_weekend", "2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211203_helyjegy", "211203_helyjegy\211203_helyjegy.csproj", "{06769882-302B-4C22-943C-A6557A3B61F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211209_eutazas", "211209_eutazas\211209_eutazas.csproj", "{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{06769882-302B-4C22-943C-A6557A3B61F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06769882-302B-4C22-943C-A6557A3B61F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06769882-302B-4C22-943C-A6557A3B61F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
