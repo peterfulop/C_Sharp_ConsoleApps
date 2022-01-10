@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211006_pilotak", "211006_pilotak\211006_pilotak.csproj", "{1A639E6A-785D-4010-9BFD-E5B38AF597E9}"
 EndProject
@@ -30,6 +30,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211203_helyjegy", "211203_helyjegy\211203_helyjegy.csproj", "{06769882-302B-4C22-943C-A6557A3B61F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "211209_eutazas", "211209_eutazas\211209_eutazas.csproj", "{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220103_fuvar", "220103_fuvar\220103_fuvar.csproj", "{186FA940-2F74-49FE-8321-F1B5A4E0560D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220110_nyelvvizsga", "220110_nyelvvizsga\220110_nyelvvizsga.csproj", "{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +97,14 @@ Global
 		{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FD23222-5EF0-4089-8B8F-9ED2D8D132B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{186FA940-2F74-49FE-8321-F1B5A4E0560D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186FA940-2F74-49FE-8321-F1B5A4E0560D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186FA940-2F74-49FE-8321-F1B5A4E0560D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186FA940-2F74-49FE-8321-F1B5A4E0560D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
