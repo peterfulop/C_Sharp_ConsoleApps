@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220114_operatorok", "220114
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220114_morze", "220114_morze\220114_morze.csproj", "{BCE28396-AD7E-44A4-8636-56EE74558DA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220114_rendelesek", "220114_rendelesek\220114_rendelesek.csproj", "{9BFE9725-1028-495B-9224-F9549F1790E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{BCE28396-AD7E-44A4-8636-56EE74558DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCE28396-AD7E-44A4-8636-56EE74558DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCE28396-AD7E-44A4-8636-56EE74558DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFE9725-1028-495B-9224-F9549F1790E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFE9725-1028-495B-9224-F9549F1790E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFE9725-1028-495B-9224-F9549F1790E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFE9725-1028-495B-9224-F9549F1790E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
