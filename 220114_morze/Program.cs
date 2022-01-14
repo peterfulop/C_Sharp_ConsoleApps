@@ -16,7 +16,6 @@ namespace _220114_morze
 
     class Idezet
     {
-
         public string Szerzo { get; set;}
         public string Szoveg { get; set;}
         public string SzerzoKAR { get; set;}
@@ -32,19 +31,19 @@ namespace _220114_morze
 
         static void Main(string[] args)
         {
-            feladat_02();
-            feladat_03();
-            feladat_04();
-            feladat_05();
-            feladat_07();
-            feladat_08();
-            feladat_09();
-            feladat_10();
+            Feladat_02();
+            Feladat_03();
+            Feladat_04();
+            Feladat_05();
+            Feladat_07();
+            Feladat_08();
+            Feladat_09();
+            Feladat_10();
 
             Console.ReadLine();
         }
 
-        private static void feladat_10()
+        private static void Feladat_10()
         {
             using (var fs = new FileStream("forditas.txt",FileMode.Create))
             {
@@ -58,20 +57,20 @@ namespace _220114_morze
             }
         }
 
-        private static void feladat_09()
+        private static void Feladat_09()
         {
             var filter = Idezetek.Where(x => x.SzerzoKAR == "ARISZTOTELÉSZ").ToList();
             Console.WriteLine($"9. feladat: Arisztotelész idézetei:");
             filter.ForEach(x => Console.WriteLine($"\t- {Morze2Szoveg(x.Szoveg)}."));
         }
 
-        private static void feladat_08()
+        private static void Feladat_08()
         {
             var max = Idezetek.OrderByDescending(x => x.Hossz).ToList().First();
             Console.WriteLine($"8. feladat: A leghosszabb idézet szerzője és az idézet: {Morze2Szoveg(max.Szerzo)}: {Morze2Szoveg(max.Szoveg)}.");
         }
 
-        private static void feladat_07()
+        private static void Feladat_07()
         {
             var szerzo = Morze2Szoveg(Idezetek.FirstOrDefault().Szerzo);
             Console.WriteLine($"7. feladat: Az első idézet szerzője: {szerzo}");
@@ -115,7 +114,7 @@ namespace _220114_morze
 
         }
 
-        private static void feladat_05()
+        private static void Feladat_05()
         {
             using (var fs = new FileStream("morze.txt", FileMode.Open))
             {
@@ -138,7 +137,7 @@ namespace _220114_morze
             }
         }
 
-        private static void feladat_04()
+        private static void Feladat_04()
         {
             Console.Write($"4. feladat: Kérek egy karaktert:");
             var karakter = Console.ReadLine().ToUpper();
@@ -155,12 +154,12 @@ namespace _220114_morze
             }
         }
 
-        private static void feladat_03()
+        private static void Feladat_03()
         {
             Console.WriteLine($"3. feladat: A morze abc {ABC.Count} db karakter kódját tartalmazza.");
         }
 
-        private static void feladat_02()
+        private static void Feladat_02()
         {
             using (var fs = new FileStream("morzeabc.txt",FileMode.Open))
             {
