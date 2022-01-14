@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220103_fuvar", "220103_fuva
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220110_nyelvvizsga", "220110_nyelvvizsga\220110_nyelvvizsga.csproj", "{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220114_operatorok", "220114_operatorok\220114_operatorok.csproj", "{EF68889B-A7B5-47ED-AAC3-153712AF3A1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BD1569C-F6B5-4BE9-9135-F30CA08746BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF68889B-A7B5-47ED-AAC3-153712AF3A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF68889B-A7B5-47ED-AAC3-153712AF3A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF68889B-A7B5-47ED-AAC3-153712AF3A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF68889B-A7B5-47ED-AAC3-153712AF3A1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
