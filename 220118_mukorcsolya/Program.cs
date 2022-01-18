@@ -14,7 +14,7 @@ namespace _220118_mukorcsolya
         public double Technikai { get; set; }
         public double Komponens { get; set; }
         public double Levonas { get; set; }
-        public double Osszpont { get; set; }
+        public double Pontszam { get; set; }
 
         public Versenyzo(string nev, string orszag, double technikai, double komponens, double levonas)
         {
@@ -23,7 +23,7 @@ namespace _220118_mukorcsolya
             this.Technikai = technikai;
             this.Komponens = komponens;
             this.Levonas = levonas;
-            this.Osszpont = technikai + komponens - levonas;
+            this.Pontszam = technikai + komponens - levonas;
         }
     }
 
@@ -55,7 +55,7 @@ namespace _220118_mukorcsolya
                 .GroupBy(x=>x.Nev)
                 .Select(x=>new {Nev = x.Key,
                     Orszag = x.Select(y=>y.Orszag).First(),
-                    Pontszam = x.Sum(y=>y.Osszpont)})
+                    Pontszam = x.Sum(y=>y.Pontszam)})
                 .OrderByDescending(x=>x.Pontszam)
                 .ToList();
 
@@ -105,7 +105,7 @@ namespace _220118_mukorcsolya
             var donto = Donto.FirstOrDefault(x=>x.Nev == versenyzoNeve);
             var rovid = Rovid.FirstOrDefault(x => x.Nev == versenyzoNeve);
 
-            double pontok = donto != null ? donto.Osszpont + rovid.Osszpont : rovid.Osszpont;
+            double pontok = donto != null ? donto.Pontszam + rovid.Pontszam : rovid.Pontszam;
 
             Console.WriteLine($"6. feladat\n\tA versenyző összpontszáma: {pontok.ToString().Replace(',','.')}");
         }
