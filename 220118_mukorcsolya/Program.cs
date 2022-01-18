@@ -15,10 +15,17 @@ namespace _220118_mukorcsolya
         public double Komponens { get; set; }
         public double Levonas { get; set; }
         public double Osszpont { get; set; }
-      
+
+        public Versenyzo(string nev, string orszag, double technikai, double komponens, double levonas)
+        {
+            this.Nev = nev;
+            this.Orszag = orszag;
+            this.Technikai = technikai;
+            this.Komponens = komponens;
+            this.Levonas = levonas;
+            this.Osszpont = technikai + komponens - levonas;
+        }
     }
-
-
 
     internal class Program
     {
@@ -41,6 +48,7 @@ namespace _220118_mukorcsolya
 
             Console.ReadLine();
         }
+
         private static void Feladat_08()
         {
             var all = Rovid.Concat(Donto)
@@ -68,12 +76,13 @@ namespace _220118_mukorcsolya
 
         private static void Feladat_07()
         {
-           var rec = Donto.GroupBy(x => x.Orszag)
-                .Select(x => new {Orszag = x.Key, Count = x.Count()})
-                .ToList();
+            Console.WriteLine($"7. feladat");
 
-           Console.WriteLine($"7. feladat");
-           rec.Where(x=>x.Count > 1).ToList().ForEach(x => Console.WriteLine($"\t{x.Orszag}: {x.Count} versenyző"));
+            Donto.GroupBy(x => x.Orszag)
+                .Select(x => new {Orszag = x.Key, Count = x.Count()})
+                .Where(x=>x.Count > 1)
+                .ToList()
+                .ForEach(x => Console.WriteLine($"\t{x.Orszag}: {x.Count} versenyző"));
         }
 
         private static void Feladat_05()
@@ -87,23 +96,16 @@ namespace _220118_mukorcsolya
                 Console.WriteLine("\tIlyen nevű induló nem volt");
                 return;
             }
+
             ÖsszPontszam(nev);
         }
 
         private static void ÖsszPontszam(string versenyzoNeve)
         {
-            var dontos = Donto.FirstOrDefault(x=>x.Nev == versenyzoNeve);
-            double pontok = 0;
+            var donto = Donto.FirstOrDefault(x=>x.Nev == versenyzoNeve);
+            var rovid = Rovid.FirstOrDefault(x => x.Nev == versenyzoNeve);
 
-            if(dontos != null)
-            {
-                pontok += dontos.Osszpont;
-            }
-            else
-            {
-                var rovid = Rovid.FirstOrDefault(x => x.Nev == versenyzoNeve);
-                pontok += rovid.Osszpont;
-            }
+            double pontok = donto != null ? donto.Osszpont + rovid.Osszpont : rovid.Osszpont;
 
             Console.WriteLine($"6. feladat\n\tA versenyző összpontszáma: {pontok.ToString().Replace(',','.')}");
         }
@@ -135,20 +137,14 @@ namespace _220118_mukorcsolya
                         var komponens = Convert.ToDouble(line[3].Replace('.', ','));
                         var levonas = Convert.ToDouble(line[4].Replace('.', ','));
 
-                        var ujVersenyzo = new Versenyzo()
-                        {
-                            Nev = line[0],
-                            Orszag = line[1],
-                            Technikai = technikai,
-                            Komponens = komponens,
-                            Levonas = levonas,
-                            Osszpont = technikai + komponens - levonas
-                        };
+                        var ujVersenyzo = new Versenyzo(line[0], line[1], technikai, komponens, levonas);
+
                         MyList.Add(ujVersenyzo);
                     }
                 }
             }
         }
+
         private static void Feladat_01()
         {
             ReadFile("rovidprogram.csv", Rovid);
