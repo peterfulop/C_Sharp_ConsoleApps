@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220114_rendelesek", "220114
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220118_mukorcsolya", "220118_mukorcsolya\220118_mukorcsolya.csproj", "{1CA8BFF4-5B69-46B9-B177-87BCBEEC90E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220119_ACB_kosarlabda", "220119_ACB_kosarlabda\220119_ACB_kosarlabda.csproj", "{B1A06ACE-3E1C-4310-8D9F-88B36726DDFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{1CA8BFF4-5B69-46B9-B177-87BCBEEC90E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CA8BFF4-5B69-46B9-B177-87BCBEEC90E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CA8BFF4-5B69-46B9-B177-87BCBEEC90E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1A06ACE-3E1C-4310-8D9F-88B36726DDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A06ACE-3E1C-4310-8D9F-88B36726DDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A06ACE-3E1C-4310-8D9F-88B36726DDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A06ACE-3E1C-4310-8D9F-88B36726DDFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
