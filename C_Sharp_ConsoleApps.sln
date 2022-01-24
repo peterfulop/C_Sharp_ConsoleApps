@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220119_FIFA_vilagranglista"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220119_szuletesek_szama", "220119_szuletesek_szama\220119_szuletesek_szama.csproj", "{10BF1473-13D5-4944-8E0E-0FBE8310DFD1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220124_snooker_vilagbajnoksag", "220124_snooker_vilagbajnoksag\220124_snooker_vilagbajnoksag.csproj", "{7B9FADF9-D7F0-466A-A6CC-9E01CD6C9CCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{10BF1473-13D5-4944-8E0E-0FBE8310DFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10BF1473-13D5-4944-8E0E-0FBE8310DFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10BF1473-13D5-4944-8E0E-0FBE8310DFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9FADF9-D7F0-466A-A6CC-9E01CD6C9CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9FADF9-D7F0-466A-A6CC-9E01CD6C9CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9FADF9-D7F0-466A-A6CC-9E01CD6C9CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9FADF9-D7F0-466A-A6CC-9E01CD6C9CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
