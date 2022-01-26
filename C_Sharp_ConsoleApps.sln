@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220124_snooker_vilagbajnoks
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220124_csudh.edu", "220124_csudh.edu\220124_csudh.edu.csproj", "{5747C3C1-5BD8-4D97-B980-96026EEBAFFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220126_EU_tagallamok", "220126_EU_tagallamok\220126_EU_tagallamok.csproj", "{69E20E01-14ED-4E3B-A09A-60F85D14CF3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220126_koridok", "220126_koridok\220126_koridok.csproj", "{F31B3AC9-A798-4D39-B1EC-70E290784D73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +163,14 @@ Global
 		{5747C3C1-5BD8-4D97-B980-96026EEBAFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5747C3C1-5BD8-4D97-B980-96026EEBAFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5747C3C1-5BD8-4D97-B980-96026EEBAFFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E20E01-14ED-4E3B-A09A-60F85D14CF3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E20E01-14ED-4E3B-A09A-60F85D14CF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E20E01-14ED-4E3B-A09A-60F85D14CF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E20E01-14ED-4E3B-A09A-60F85D14CF3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31B3AC9-A798-4D39-B1EC-70E290784D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31B3AC9-A798-4D39-B1EC-70E290784D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31B3AC9-A798-4D39-B1EC-70E290784D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31B3AC9-A798-4D39-B1EC-70E290784D73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
