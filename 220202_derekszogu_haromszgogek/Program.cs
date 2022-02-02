@@ -38,36 +38,33 @@ namespace _220202_derekszogu_haromszgogek
             }
         }
 
-        
         public DHaromszog(string sor, double a, double b, double c)
         {
             EllNovekvoSorrend = (a <= b && b <= c);
             EllMegszerkesztheto = (a + b > c);
             EllDerekszogu = ((c * c) == (a * a) + (b * b));
 
-            this.SorSzama = $"{sor}. sor";
-            this.A = a;
-            this.B = b;
-            this.C = c;
+            SorSzama = $"{sor}. sor";
+            A = a;
+            B = b;
+            C = c;
 
             SetErrorMessages();
         }
 
         private string IsZeroOrNeg()
         {
-            if (this.A <= 0)
+            if (A <= 0)
             {
                 return "a";
             }
-            else if (this.B <= 0)
+            else if (B <= 0)
             {
                 return "b";
-
             }
-            else if (this.C <= 0)
+            else if (C <= 0)
             {
                 return "c";
-
             }
             return null;
         }
@@ -77,22 +74,22 @@ namespace _220202_derekszogu_haromszgogek
             var hibasOldal = IsZeroOrNeg();
             if (hibasOldal != null)
             {
-                ErrMessage = $"{this.SorSzama}: A(z) '{hibasOldal}' oldal nem lehet nulla vagy negatív!";
+                ErrMessage = $"{SorSzama}: A(z) '{hibasOldal}' oldal nem lehet nulla vagy negatív!";
                 return;
             }
             if (!EllNovekvoSorrend)
             {
-                ErrMessage = $"{this.SorSzama}: Az adatok nincsenek növekvő sorrendben!";
+                ErrMessage = $"{SorSzama}: Az adatok nincsenek növekvő sorrendben!";
                 return;
             }
             else if (!EllMegszerkesztheto)
             {
-                ErrMessage = $"{this.SorSzama}: A háromszöget nem lehet megszerkeszteni!";
+                ErrMessage = $"{SorSzama}: A háromszöget nem lehet megszerkeszteni!";
                 return;
             }
             else if (!EllDerekszogu)
             {
-                ErrMessage = $"{this.SorSzama}: A háromszög nem derékszögű!";
+                ErrMessage = $"{SorSzama}: A háromszög nem derékszögű!";
                 return;
             }
         }
