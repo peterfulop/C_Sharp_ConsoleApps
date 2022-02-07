@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220206_sorozatok_20_okt", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220206_meteorologia_20_maj", "220206_meteorologia_20_maj\220206_meteorologia_20_maj.csproj", "{DF3345BC-D599-4EEA-BA52-2A5C1DE68497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220206_DHCP_szerver", "220206_DHCP_szerver\220206_DHCP_szerver.csproj", "{7C45AEB3-7259-42DE-8E14-CFEECF09C9C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +209,10 @@ Global
 		{DF3345BC-D599-4EEA-BA52-2A5C1DE68497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF3345BC-D599-4EEA-BA52-2A5C1DE68497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF3345BC-D599-4EEA-BA52-2A5C1DE68497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C45AEB3-7259-42DE-8E14-CFEECF09C9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C45AEB3-7259-42DE-8E14-CFEECF09C9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C45AEB3-7259-42DE-8E14-CFEECF09C9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C45AEB3-7259-42DE-8E14-CFEECF09C9C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
